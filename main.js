@@ -43,17 +43,14 @@ const normalizeSinal = () => {
         if (time === 3) {
             setYellow();
         }
-
         if (time === 10) {
             setGreen();
         }
-
         if (time === 0) {
             setRed();
             clearInterval(timeInterval);
             waitAndRestart();
         }
-
         time--;
     }, 1000);
 };
@@ -63,7 +60,7 @@ const setRedCount = () => {
 
     timeRedInterval = setInterval(() => {
         timer.innerHTML = redCount;
-
+        
         redCount--;
 
         if (redCount === 0) {
@@ -71,7 +68,6 @@ const setRedCount = () => {
         }
     }, 1000);
 }
-
 
 const waitAndRestart = () => {
     setRedCount();
@@ -94,7 +90,6 @@ const fechar = () => {
     if (sinalColor !== "green" || !buttonCliclable) {
         return
     }
-
     time = 3;
 
     blockSignal();
